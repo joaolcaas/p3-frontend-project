@@ -1,5 +1,9 @@
 .row {
-    display: flex; /* equal height of the children */
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20em,1fr));
+    grid-gap: 5rem;
+    height: 300px; /* Or whatever */
+    align-items: center;
   }
   
   .col {

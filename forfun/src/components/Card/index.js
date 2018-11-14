@@ -1,23 +1,25 @@
-import React, { Component } from "react";
+import React from "react";
 import './index.css'
 import { Card, Image } from 'semantic-ui-react'
+import { Button, Icon } from 'semantic-ui-react'
 
-export default class CardGame extends Component{
-  constructor(props) {
-    super(props);
-    console.log(props)
-  }
-
-  render(){
-    return(
-      <Card>
-      <Image id='image' src='https://react.semantic-ui.com/images/avatar/large/matthew.png'/>
-      <Card.Content>
-    <Card.Header>{this.props.name}</Card.Header>
-    <Card.Description>{this.props.playerName}</Card.Description>
+const CardGame = ({ game }) => 
+  <Card>
+    <Image className='image' src='https://react.semantic-ui.com/images/avatar/large/matthew.png'/>
+    <Card.Content>
+    <Card.Header className="header">{game.name}</Card.Header>
+    <Card.Meta>
+        <span className='date'>Joined in 2015</span>
+      </Card.Meta>
+    <Card.Description className="header">{game.playerName}</Card.Description>
   </Card.Content>
-  </Card>
-    );
-  }
-}
+  <Button animated>
+  <Button.Content visible>Next</Button.Content>
+    <Button.Content hidden>
+      <Icon name='arrow right' />
+    </Button.Content>
+</Button>
+</Card>;
 
+
+export default CardGame;

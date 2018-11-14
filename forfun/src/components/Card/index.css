@@ -1,6 +1,12 @@
-#image {
-    width:20%;
+.image {
+    width:30%;
     margin-top:30px;
     background-color: #16A085;
+    
     color:white;
+}
+
+.header{
+    font-family: 'Anton', sans-serif;
+    color:red;
 }
