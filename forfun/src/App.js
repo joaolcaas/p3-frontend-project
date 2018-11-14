@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import {Element,scroller} from 'react-scroll';
 import Welcome from "./components/Welcome";
-import Gallery from "./components/GameGallery";
-import products from "./data.json"
-
+import products from "./data.json";
+import GridGame from "./components/Grid";
 
 let filteredProducts = products;
 class App extends Component {
@@ -18,8 +17,8 @@ class App extends Component {
         <Element name="home" className="element">
           <Welcome/>
         </Element>
-        <Element name="Games" className="element">
-          <Gallery games={filteredProducts}/>
+        <Element name="games" className="element">
+        <GridGame games={filteredProducts}/>
         </Element>
       </div>
     );
