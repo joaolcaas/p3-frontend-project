@@ -4,6 +4,7 @@
     grid-gap: 5rem;
     height: 300px; /* Or whatever */
     align-items: center;
+    padding: 10px;
   }
   
   .col {
