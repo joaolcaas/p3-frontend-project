@@ -1,11 +1,11 @@
 import React,{Component} from "react";
 
 
-export default class namePlayer extends Component{
+export default class NamePlayer extends Component{
     render(){
         return(
             <div>
-                {this.props.namePlayer}
+               <h3> {this.props.namePlayer} </h3>
             </div>
         );
     }

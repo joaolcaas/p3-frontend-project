@@ -1,0 +1,22 @@
+#gridWelcome {
+    margin-top:30px;
+    background-color: #16A085;
+    color:white;
+    height: 550px;
+}
+
+#welcomeTitle {
+    font-family: 'Anton', sans-serif;
+    font-size: 5vw;
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 200px;
+}
+
+#welcomeSubTitle{
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5vw;
+    margin-bottom: 70px;
+}
+

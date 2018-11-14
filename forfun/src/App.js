@@ -1,28 +1,36 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Code from './Code.js';
+import {Element,scroller} from 'react-scroll';
+import Welcome from "./components/Welcome";
+import Gallery from "./components/GameGallery";
+import products from "./data.json"
 
+
+let filteredProducts = products;
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.scrollTo = this.scrollTo.bind(this);
+  }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <Code plus="*">src/App.js</Code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Element name="home" className="element">
+          <Welcome/>
+        </Element>
+        <Element name="Games" className="element">
+          <Gallery games={filteredProducts}/>
+        </Element>
       </div>
     );
+  }
+  scrollTo(elementName) {
+    scroller.scrollTo(elementName, {
+      duration: 800,
+      delay: 0,
+      smooth: 'easeInOutQuart',
+      offset: -40
+    })
   }
 }
 

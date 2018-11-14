@@ -5,7 +5,7 @@ export default class GameName extends Component{
     render(){
         return(
             <div>
-                {this.props.gameName}
+               <h3>{this.props.name}</h3> 
             </div>
         );
     }
