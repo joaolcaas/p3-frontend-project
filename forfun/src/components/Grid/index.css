@@ -1,6 +1,6 @@
 .row {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(20em,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(15em,1fr));
     grid-gap: 5rem;
     height: 300px; /* Or whatever */
     align-items: center;
@@ -13,3 +13,9 @@
     padding: 1em;
     border: solid;
   }
+  #gridGrid {
+    margin-top:30px;
+    background-color:#131112;
+    color:white;
+    height: 750px;
+}

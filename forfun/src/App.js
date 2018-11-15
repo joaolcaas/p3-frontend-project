@@ -4,6 +4,7 @@ import {Element,scroller} from 'react-scroll';
 import Welcome from "./components/Welcome";
 import products from "./data.json";
 import GridGame from "./components/Grid";
+import NavBar from "./components/NavBar";
 
 let filteredProducts = products;
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <NavBar scrollTo={this.scrollTo}/>
         <Element name="home" className="element">
           <Welcome/>
         </Element>
