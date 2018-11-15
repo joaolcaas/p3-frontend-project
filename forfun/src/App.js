@@ -5,22 +5,26 @@ import Welcome from "./components/Welcome";
 import products from "./data.json";
 import GridGame from "./components/Grid";
 import NavBar from "./components/NavBar";
+import Login from "./components/Login";
 
 let filteredProducts = products;
 class App extends Component {
   constructor(props){
     super(props);
     this.scrollTo = this.scrollTo.bind(this);
-  }
+  }GridGame
   render() {
     return (
       <div className="App">
         <NavBar scrollTo={this.scrollTo}/>
-        <Element name="home" className="element">
+        <Element namGridGamee="home" className="element">
           <Welcome/>
         </Element>
         <Element name="games" className="element">
         <GridGame games={filteredProducts}/>
+        </Element>
+        <Element name="Login" className="element">
+        <Login/>
         </Element>
       </div>
     );

@@ -17,6 +17,9 @@ class NavBar extends Component {
                             <NavItem onClick={() => this.props.scrollTo('games')} href="#" id='navItem'>
                                 Games
                             </NavItem>
+                            <NavItem onClick={() => this.props.scrollTo('Login')} href="#" id='navItem'>
+                                Login
+                            </NavItem>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
