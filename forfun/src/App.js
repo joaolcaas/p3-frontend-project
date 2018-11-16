@@ -12,12 +12,12 @@ class App extends Component {
   constructor(props){
     super(props);
     this.scrollTo = this.scrollTo.bind(this);
-  }GridGame
+  }
   render() {
     return (
       <div className="App">
         <NavBar scrollTo={this.scrollTo}/>
-        <Element namGridGamee="home" className="element">
+        <Element name="home" className="element">
           <Welcome/>
         </Element>
         <Element name="games" className="element">

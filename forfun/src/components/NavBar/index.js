@@ -4,11 +4,11 @@ import './index.css'
 
 class NavBar extends Component {
 
-    render() {
+    render() {  
 
         return (
             <div>
-                <Navbar  inverse collapseOnSelect fixedTop id='navbar'>
+                <Navbar toggleNavKey={0} inverse collapseOnSelect fixedTop id='navbar'>
                     <Navbar.Collapse>
                         <Nav pullRight>
                             <NavItem onClick={() => this.props.scrollTo('home')} href="#" id='navItem'>
