@@ -1,21 +1,25 @@
 .row {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(15em,1fr));
-    grid-gap: 5rem;
+    grid-gap: 10rem;
     height: 300px; /* Or whatever */
     align-items: center;
-    padding: 10px;
+    padding: 25px;
+    
   }
   
   .col {
     flex: 1; /* additionally, equal width */
-    
     padding: 1em;
     border: solid;
+    
   }
   #gridGrid {
-    
-    background-color:#131112;
-    color:white;
-    height: 750px;
+    height: 650;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: center;
+
+    align-items: center;
+    justify-content: center;
 }

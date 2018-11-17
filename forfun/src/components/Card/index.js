@@ -10,7 +10,7 @@ const CardGame = ({ game }) =>
     <Card.Header className="header">{game.name}</Card.Header>
     <Card.Meta>
         <span className='date'>Joined in 2015</span>
-      </Card.Meta>
+    </Card.Meta>
     <Card.Description className="header">{game.playerName}</Card.Description>
   </Card.Content>
   <Button animated>

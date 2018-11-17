@@ -5,9 +5,9 @@ import Welcome from "./components/Welcome";
 import products from "./data.json";
 import GridGame from "./components/Grid";
 import NavBar from "./components/NavBar";
-import Login from "./components/Login";
 
 let filteredProducts = products;
+
 class App extends Component {
   constructor(props){
     super(props);
@@ -18,13 +18,10 @@ class App extends Component {
       <div className="App">
         <NavBar scrollTo={this.scrollTo}/>
         <Element name="home" className="element">
-          <Welcome/>
+           <Welcome/>
         </Element>
         <Element name="games" className="element">
-        <GridGame games={filteredProducts}/>
-        </Element>
-        <Element name="Login" className="element">
-        <Login/>
+        {false && <GridGame games={filteredProducts}/>}
         </Element>
       </div>
     );
