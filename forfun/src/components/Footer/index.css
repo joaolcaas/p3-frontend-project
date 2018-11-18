@@ -1,0 +1,40 @@
+#footerGrid {
+    background-color: #4502F1;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+#footerCop{
+    text-align: center;
+    margin-top: 10px;
+}
+
+#gridFooterCop {
+    background-color: #4502F1;
+}
+
+#footerTitle {
+    text-align: center;
+    color: white;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: bolder;
+    font-size: 1.2em;
+
+}
+
+#content-footer {
+    padding-left: 55px;
+}
+
+
+ul {
+    list-style: none;
+}
+
+#dev {
+    color:white;
+}
+
+#dev:hover {
+    color:white;
+}

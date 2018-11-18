@@ -14,12 +14,11 @@
     border: solid;
     
   }
-  #gridGrid {
-    height: 650;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    display: center;
 
-    align-items: center;
-    justify-content: center;
+  #gridGrid {
+    background-color:#4502F1;
+    color:white;
+    height: 500px;
+    margin-top: 70px;
+    padding-left: 40px;
 }

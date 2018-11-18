@@ -1,5 +1,8 @@
-.button {
-    width: 100px;
-    padding: 12px 20px;
-    color: red;
+.modal-container {
+       position: fixed;
+      
+}
+.modal-container .modal, .modal-container .modal-backdrop {
+    position: inherit;
+
 }

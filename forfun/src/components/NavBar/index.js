@@ -12,10 +12,16 @@ class NavBar extends Component {
                     <Navbar.Collapse>
                         <Nav pullRight>
                          <NavItem onClick={() => this.props.scrollTo('home')} href="#" >
-                                <Image style={ { position: 'absolute', left: -1000, top: 0 } } src="favicon.ico" height="70px" width="110px" alt="text here" />
+                                <Image style={ { position: 'absolute', left: -900, top: 0 } } src="controle.png" height="70px" width="110px" alt="text here" />
                             </NavItem>
                             <NavItem onClick={() => this.props.scrollTo('games')} href="#" id='navItem'>
                                 Games
+                            </NavItem>
+                            <NavItem onClick={() => this.props.scrollTo('login')} href="#" id='navItem'>
+                                Login
+                            </NavItem>
+                            <NavItem onClick={() => this.props.scrollTo('login')} href="#" id='navItem'>
+                                Informações
                             </NavItem>
                         </Nav>
                     </Navbar.Collapse>
