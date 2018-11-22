@@ -11,7 +11,6 @@ const CardGame = ({ game }) =>
     <Card.Meta>
         <span className='date'>Joined in 2015</span>
     </Card.Meta>
-    <Card.Description className="header">{game.playerName}</Card.Description>
   </Card.Content>
   <Button animated>
   <Button.Content visible>Next</Button.Content>

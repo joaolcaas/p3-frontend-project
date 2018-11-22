@@ -14,17 +14,16 @@ export default class GameGrid extends Component{
     componentDidMount(){
         axios.get('http://localhost:3000/game')
         .then(res=>{
-            const gameCards = res.data
-            this.setState({gameCards});
+            const gamesCards = res.data
+            this.setState({gamesCards})
+            console.log(gamesCards);
         })
     }
 
     render(){
-        const { games } = this.props;
-        
         return(
             <Grid divided id='gridGrid'>
-                {games && games.map(game=>{
+                {this.state.gamesCards.map(game=>{
                     return(
                         <article key = {game.id}>
                         <>

@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import './App.css';
 import {Element,scroller} from 'react-scroll';
 import Welcome from "./components/Welcome";
-import products from "./data.json";
 import GridGame from "./components/Grid";
 import NavBar from "./components/NavBar";
 import Login from "./components/Login";
 import Footer from "./components/Footer";
 
-let filteredProducts = products;
+
 
 class App extends Component {
   constructor(props){
@@ -16,6 +15,7 @@ class App extends Component {
     this.scrollTo = this.scrollTo.bind(this);
     this.handleShow = this.handleShow.bind(this);
     this.handleClose= this.handleClose.bind(this);
+    
     this.state = {
       show:false
     };
@@ -36,15 +36,10 @@ class App extends Component {
            <Welcome/>
         </Element>
         <Element name="games" className="element">
-        {this.state.show && <GridGame games={filteredProducts}/>}
+        <h2>JOGOS</h2>
+        <GridGame games/>
         </Element>
         <Element name="buttons">
-        <button onClick={this.handleShow}>
-          ABRE  
-        </button>
-        <button onClick={this.handleClose}>
-            FECHA
-        </button>
         </Element>
         <Element name="login" className="element">
           <Login show2={this.handleShow}/>
