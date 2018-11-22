@@ -31,7 +31,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <NavBar scrollTo={this.scrollTo}/>
+        <NavBar scrollTo={this.scrollTo} openAdmin={this.openAdmin}/>
         <Element name="home" className="element">
            <Welcome/>
         </Element>
@@ -42,7 +42,7 @@ class App extends Component {
         <Element name="buttons">
         </Element>
         <Element name="login" className="element">
-          <Login show2={this.handleShow}/>
+          <Login/>
         </Element>
         <Element name ='footer' className="element">
           <Footer/>
@@ -57,6 +57,10 @@ class App extends Component {
       smooth: 'easeInOutQuart',
       offset: -40
     })
+  }
+
+  openAdmin(){
+    
   }
 }
 
