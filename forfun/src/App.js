@@ -7,8 +7,6 @@ import NavBar from "./components/NavBar";
 import Login from "./components/Login";
 import Footer from "./components/Footer";
 
-
-
 class App extends Component {
   constructor(props){
     super(props);
@@ -31,13 +29,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <NavBar scrollTo={this.scrollTo} openAdmin={this.openAdmin}/>
+        <NavBar scrollTo={this.scrollTo}/>
         <Element name="home" className="element">
            <Welcome/>
         </Element>
         <Element name="games" className="element">
         <h2>JOGOS</h2>
-        <GridGame games/>
+          <GridGame games/>
         </Element>
         <Element name="buttons">
         </Element>
@@ -59,9 +57,7 @@ class App extends Component {
     })
   }
 
-  openAdmin(){
-    
-  }
+
 }
 
 export default App;

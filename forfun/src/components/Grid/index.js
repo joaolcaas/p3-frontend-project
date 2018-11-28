@@ -16,7 +16,9 @@ export default class GameGrid extends Component{
         .then(res=>{
             const gamesCards = res.data
             this.setState({gamesCards})
-            console.log(gamesCards);
+        })
+        .catch(error=>{
+            return(error)
         })
     }
 

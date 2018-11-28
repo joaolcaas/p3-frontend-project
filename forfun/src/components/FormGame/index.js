@@ -10,12 +10,17 @@ class FormGame extends Component {
 
     this.state = {
       show: false,
-      name:''
+      name:'',
+      photo:''
     };
   }
 
-  handleChange = event =>{
+  nameChange = event =>{
     this.setState({name: event.target.value});
+  }
+  
+  photoChange = event =>{
+    this.setState({photo: event.target.value});
   }
 
   handleSubmit = event => {
@@ -24,10 +29,11 @@ class FormGame extends Component {
     event.preventDefault();
 
     const user = {
-      name: this.state.name
+      name: this.state.name,
+      photo:this.state.photo
     };
 
-    axios.post(`http://localhost:3000/game/?name=` + user.name , { 
+    axios.post(`http://localhost:3000/game/?name=` + user.name +'&&urlPhoto=' + user.photo, { 
      })
       .then(res => {
         console.log(res);
@@ -63,7 +69,11 @@ class FormGame extends Component {
           <Form horizontal>
           <FormGroup controlId="formInlineNome">
           <ControlLabel>NOME</ControlLabel>{' '}
-          <FormControl type="email" placeholder="Dota" onChange={this.handleChange}/>
+          <FormControl placeholder="Dota" onChange={this.nameChange}/>
+            </FormGroup>{' '}
+          <FormGroup controlId="formInlineNome">
+          <ControlLabel>URL FOTO</ControlLabel>{' '}
+          <FormControl placeholder="www.photo.com" onChange={this.photoChange}/>
             </FormGroup>{' '}
           <Button type="submit" onClick={this.handleSubmit} >Adicionar</Button>
 </Form>
