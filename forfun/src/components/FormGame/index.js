@@ -1,6 +1,6 @@
 import  React,{Component} from "react";
 import {Button, Modal,Form,FormGroup,ControlLabel,FormControl} from 'react-bootstrap'
-import axios from 'axios';
+
 
 class FormGame extends Component {
   constructor(props, context) {
@@ -24,7 +24,6 @@ class FormGame extends Component {
   }
 
   handleSubmit = event => {
-    window.location.reload()
     this.handleHide()
     event.preventDefault();
 
@@ -33,12 +32,7 @@ class FormGame extends Component {
       photo:this.state.photo
     };
 
-    axios.post(`http://localhost:3000/game/?name=` + user.name +'&&urlPhoto=' + user.photo, { 
-     })
-      .then(res => {
-        console.log(res);
-        console.log(res.data);
-      })
+    this.props.postGame(user);
   }
   
   handleHide() {
@@ -48,7 +42,7 @@ class FormGame extends Component {
     return (
       <div className="modal-container" style={{ height: 50}}>
         <Button
-          bsStyle="Button"
+          bsStyle="success"
           bsSize="large"
           onClick={() => this.setState({ show: true })}>
           Adicionar novo game

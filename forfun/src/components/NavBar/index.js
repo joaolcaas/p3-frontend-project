@@ -25,7 +25,7 @@ class NavBar extends Component {
                                 Informações
                             </NavItem>
                             <NavItem  href="#" id='navItem'>
-                                <FormGame/>
+                                <FormGame postGame={this.props.postGame}/>
                             </NavItem>
                         </Nav>
                     </Navbar.Collapse>
