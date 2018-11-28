@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Grid, Col, Image} from 'react-bootstrap'
+import {Grid, Col} from 'react-bootstrap'
 import './index.css'
 
 class Footer extends Component {

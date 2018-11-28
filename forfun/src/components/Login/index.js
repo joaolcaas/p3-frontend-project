@@ -46,7 +46,7 @@ class Login extends Component {
           <ControlLabel>Senha</ControlLabel>{' '}
           <FormControl type="password"/>
             </FormGroup>{' '}
-          <Button type="submit" onClick={() => this.props.show2} >LOGAR</Button>
+          <Button type="submit">LOGAR</Button>
 </Form>
           </Modal.Body>
           <Modal.Footer>

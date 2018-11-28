@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Navbar, Nav, NavItem,Image } from 'react-bootstrap'
 import './index.css'
+import FormGame from "../FormGame";
 
 class NavBar extends Component {
 
@@ -12,7 +13,7 @@ class NavBar extends Component {
                     <Navbar.Collapse>
                         <Nav pullRight>
                          <NavItem onClick={() => this.props.scrollTo('home')} href="#" >
-                                <Image style={ { position: 'absolute', left: -900, top: 0 } } src="controle.png" height="70px" width="110px" alt="text here" />
+                                <Image style={ { position: 'absolute', left: -700, top: 0 } } src="controle.png" height="70px" width="110px" alt="text here" />
                             </NavItem>
                             <NavItem onClick={() => this.props.scrollTo('games')} href="#" id='navItem'>
                                 Games
@@ -22,6 +23,9 @@ class NavBar extends Component {
                             </NavItem>
                             <NavItem onClick={() => this.props.scrollTo('login')} href="#" id='navItem'>
                                 Informações
+                            </NavItem>
+                            <NavItem  href="#" id='navItem'>
+                                <FormGame postGame={this.props.postGame}/>
                             </NavItem>
                         </Nav>
                     </Navbar.Collapse>
